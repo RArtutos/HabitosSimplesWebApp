@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Hábitos Simples</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="theme-switcher">
+      <button class="theme-btn dark active" data-theme="dark"></button>
+      <button class="theme-btn ocean" data-theme="ocean"></button>
+      <button class="theme-btn forest" data-theme="forest"></button>
+      <button class="theme-btn sunset" data-theme="sunset"></button>
+    </div>
+    <div id="app">
+      <div class="container">
+        <h1>Hábitos Simples</h1>
+        <div class="stats">
+          <div class="stat-item">
+            <span id="totalHabits">0</span>
+            <span class="stat-label">Hábitos</span>
+          </div>
+          <div class="stat-item">
+            <span id="completedToday">0</span>
+            <span class="stat-label">Completados Hoy</span>
+          </div>
+          <div class="stat-item">
+            <span id="currentStreak">0</span>
+            <span class="stat-label">Racha Actual</span>
+          </div>
+        </div>
+        <div class="input-container">
+          <input 
+            type="text" 
+            id="habitInput" 
+            placeholder="Ingresa un nuevo hábito..."
+            maxlength="50"
+          />
+          <select id="categorySelect">
+            <option value="personal">Personal</option>
+            <option value="salud">Salud</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="estudio">Estudio</option>
+          </select>
+          <button id="addHabit">Agregar</button>
+        </div>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="personal">Personal</button>
+          <button class="filter-btn" data-filter="salud">Salud</button>
+          <button class="filter-btn" data-filter="trabajo">Trabajo</button>
+          <button class="filter-btn" data-filter="estudio">Estudio</button>
+        </div>
+        <ul id="habitList"></ul>
+      </div>
+    </div>
+    <div id="offlineNotification" class="offline-notification">
+      Modo sin conexión activo
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
